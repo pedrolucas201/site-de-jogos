@@ -22,6 +22,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         placeholder="Search for games..."
         value={query}
         onChange={handleInputChange}
+        className='search-input'
       />
       <button onClick={handleSearch}>Search</button>
     </div>
