@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Category from './pages/Category';
+import GamePage from './components/GamePage';
+import ThemeSwitcher from './components/ThemeSwitcher'; // Importe o ThemeSwitcher
+import Login from './components/Login';
+import Registro from './components/Registro';
+import Perfil from './components/Perfil';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <Router>
+            <div style={{ height: '100%' }}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/category/:categoryName" element={<Category />} />
+                    <Route path="/games/:gameId" element={<GamePage />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Registro />} />
+                    <Route path='/perfil' element={<Perfil />} />
+                    
+                    
+                    
+                    <Route path="*" element={<div>404 - Página não encontrada</div>} />
+                </Routes>
+                <ThemeSwitcher />
+            </div>
+        </Router>
+    );
+};
 
 export default App;
