@@ -1,15 +1,11 @@
 /* Estilos Globais */
 
+/* Responsividade */
 @media (max-width: 768px) {
   body {
     font-size: 16px;
-    font-family: Poppins, sans-serif;
     max-width: auto;
     max-height: auto;
-  }
-
-  #root {
-    padding: 0;
   }
 
   header {
@@ -43,61 +39,26 @@
     padding: 10px;
   }
 
-  .back-to-home-button {
-    padding: 10px 15px;
+  .back-to-home-button,
+  .theme-switcher,
+  .search-bar input[type="text"],
+  .search-bar button,
+  .neon-button,
+  .auth-buttons .neon-button,
+  .login-form input,
+  .login-form button {
+    padding: 8px 16px;
     font-size: 16px;
   }
 
-  .theme-switcher {
-    padding: 10px 15px;
-    font-size: 16px;
-  }
-
-  .search-bar input[type="text"] {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
+  .search-bar input[type="text"],
   .search-bar button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 14px;
-  }
-
-  .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .back-to-home-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .theme-switcher {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .auth-buttons .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .game-card {
-    width: 150px;
-    height: 150px;
-  }
-
-  .game-card img {
-    border-radius: 6px;
   }
 
   .game-card.light-theme {
     box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
-  }
-
-  .game-card.light-theme h3 {
-    color: #ff00ff;
   }
 
   .back-to-home-button.light-theme {
@@ -109,18 +70,12 @@
     border-color: #ff00ff;
   }
 
-  .error-message {
-    margin-bottom: 10px;
-  }
-
+  .error-message,
   .success-message {
     margin-bottom: 10px;
   }
 
-  .login-form input {
-    padding: 10px;
-  }
-
+  .login-form input,
   .login-form button {
     padding: 10px;
   }
@@ -142,206 +97,122 @@
     font-size: 16px;
   }
 
-  .login-form input {
-    padding: 10px;
+  .auth-buttons .neon-button:hover {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
   }
 
-  .login-form button {
-    padding: 10px;
+  .game-card {
+    width: 150px;
+    height: 150px;
   }
 
-  .auth-buttons-container .neon-button {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  .auth-buttons-container .neon-button:hover {
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-  }
-
-  .profile-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    background-color: #121212;
-    color: #fff;
-  }
-
-  .profile-header {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .profile-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-  }   
-
-  .profile-content p {
-    margin-bottom: 10px;
-  }
-
-  .logout-button {
-    background-color: #ff4c4c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
-  }
-
-  .logout-button:hover {
-    background-color: #ff0000;
-  }
-
-  .auth-buttons {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .auth-buttons .neon-button {
-    margin-bottom: 10px;
-    display: inline-block;
-  }
-
-  .register-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #0d0d0d;
-    color: #fff;
-    font-family: 'Press Start 2P', cursive;
-  }
-
-  h1 {
-    color: #39ff14;
-    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-  }
-
-  .register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .register-form input {
-    padding: 15px;
-    font-size: 16px;
-    background-color: #222;
-    border: none;
-    border-bottom: 2px solid #39ff14;
-    color: white;
-    outline: none;
-  }
-
-  .register-form input:focus {
-    border-color: #00ffff;
-  }
-
-  .register-form button {
-    padding: 15px;
-    background-color: #39ff14;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-  }
-
-  .register-form button:hover {
-    background-color: #00ffff;
-  }
-
-  .error-message {
-    color: #ff073a;
-    margin-bottom: 15px;
-  }
-
-  .success-message {
-    color: #39ff14;
-    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-  }
-
-  p {
-    color: #fff;
-  }
-
-  a {
-    color: #39ff14;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #00ffff;
-  }
-
-  .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #0d0d0d;
-    color: #fff;
-    font-family: 'Press Start 2P', cursive;
-  }
-
-  h1 {
-    color: #39ff14;
-    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-  }
-
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .login-form input {
-    padding: 15px;
-    font-size: 16px;
-    background-color: #222;
-    border: none;
-    border-bottom: 2px solid #39ff14;
-    color: white;
-    outline: none;
+  .game-card img {
+    border-radius: 6px;
   }
 }
 
-body {
-  font-family: Poppins, sans-serif;
-  background-color: #0f0f0f; 
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  color: #00ffff; 
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Estilos para Botões Neon */
+.neon-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-/* Container principal */
+.neon-button:hover {
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+/* Estilos para o container de perfil */
+.profile-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.profile-icon {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.profile-page {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Estilos para o container de informações do usuário */
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+}
+
+.profile-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.profile-content p {
+  margin-bottom: 10px;
+}
+
+.logout-button {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+
+.logout-button:hover {
+  background-color: #ff0000;
+}
+
+/* Estilos para o container de autenticação */
+
+.auth-buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.auth-buttons .neon-button {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Estilos para o container principal */
 #root {
   display: flex;
   flex-direction: column;
@@ -362,7 +233,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -444,7 +315,7 @@ footer {
   color: #00ffff;
   width: 100%;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
   flex-shrink: 0;
 }
 
@@ -469,14 +340,6 @@ footer {
 }
 
 /* Switch de tema */
-
-@media (max-width: 768px) {
-  .theme-switcher {
-    top: 10px;
-    right: 10px;
-  }
-}
-
 .theme-switcher {
   position: absolute;
   top: 20px;
@@ -526,23 +389,6 @@ footer.light-theme {
 }
 
 /* Barra de Pesquisa */
-
-@media (max-width: 768px) {
-  .search-bar {
-    padding: 10px;
-  }
-
-  .search-bar input[type="text"] {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-
-  .search-bar button {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
- 
 .search-bar {
   display: flex;
   justify-content: center;
@@ -580,26 +426,8 @@ footer.light-theme {
   border-color: #ff00ff;
 }
 
-.search-input ::placeholder{
+.search-input ::placeholder {
   font: Poppins, sans-serif;
-}
-
-/* Estilos para Botões Neon */
-.neon-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #111;
-  border: 2px solid #0ff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.neon-button:hover {
-  color: #0ff;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
 }
 
 /* Estilos para o container de registro */
@@ -679,119 +507,6 @@ a:hover {
   color: #00ffff;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .register-container {
-    padding: 20px;
-  }
-
-  .register-form input {
-    padding: 10px;
-  }
-
-  .register-form button {
-    padding: 10px;
-  }
-
-  .search-bar input[type="text"] {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .search-bar button {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .neon-button:hover {
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-  }
-
-  .back-to-home-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .theme-switcher {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .auth-buttons .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .auth-buttons .neon-button:hover {
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-  }
-
-  .game-card {
-    width: 150px;
-    height: 150px;
-  }
-
-  .game-card img {
-    border-radius: 6px;
-  }
-
-  .game-card.light-theme {
-    box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
-  }
-
-  .game-card.light-theme h3 {
-    color: #ff00ff;
-  }
-
-  .back-to-home-button.light-theme {
-    background-color: #00ffff;
-    color: #0f0f0f;
-  }
-
-  .search-bar input[type="text"]:focus {
-    border-color: #ff00ff;
-  }
-
-  .error-message {
-    margin-bottom: 10px;
-  }
-
-  .success-message {
-    margin-bottom: 10px;
-  }
-
-  .login-form input {
-    padding: 10px;
-  }
-
-  .login-form button {
-    padding: 10px;
-  }
-
-  .profile-container {
-    padding: 20px;
-  }
-
-  .profile-icon {
-    font-size: 2rem;
-  }
-
-  .profile-content {
-    font-size: 1rem;
-  }
-
-  .logout-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-}
-
 /* Estilos para o container de login */
 .login-container {
   display: flex;
@@ -867,130 +582,4 @@ a {
 
 a:hover {
   color: #00ffff;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .login-container {
-    padding: 20px;
-  }
-
-  .login-form input {
-    padding: 10px;
-  }
-
-  .login-form button {
-    padding: 10px;
-  }
-}
-
-/* Estilizando a seção dos botões no topo */
-.auth-buttons-container {
-  position: absolute;
-  top: 10px; 
-  left: 20px;
-  display: flex;
-  gap: 15px;
-  z-index: 1000; 
-}
-
-.auth-buttons-container .neon-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #111;
-  border: 2px solid #0ff;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.auth-buttons-container .neon-button:hover {
-  color: #0ff;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-  border-color: #00f6ff;
-}
-
-/* Estilos para o container de perfil */
-.profile-container {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1000; 
-}
-
-.profile-icon {
-  font-size: 2.5rem; 
-  color: #fff; 
-  cursor: pointer;
-}
-
-.profile-page {
-  text-align: center;
-  margin-top: 50px;
-}
-
-/* Estilos para o container de informações do usuário */
-
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-  background-color: #121212;
-  color: #fff;
-}
-
-.profile-header {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.profile-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-}
-
-.profile-content p {
-  margin-bottom: 10px; 
-}
-
-.logout-button {
-  background-color: #ff4c4c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  position: absolute;
-  bottom: 20px;
-  text-align: center;
-}
-
-.logout-button:hover {
-  background-color: #ff0000;
-}
-
-/* Estilos para o container de autenticação */
-
-.auth-buttons {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.auth-buttons .neon-button {
-  margin-bottom: 10px;
-  display: inline-block;
 }
