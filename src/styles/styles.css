@@ -395,14 +395,6 @@ a:hover {
     border-color: #ff00ff;
   }
 
-  .register-form input {
-    padding: 10px;
-  }
-
-  .register-form button {
-    padding: 10px;
-  }
-
   .error-message {
     margin-bottom: 10px;
   }
@@ -411,30 +403,12 @@ a:hover {
     margin-bottom: 10px;
   }
 
-  .auth-buttons-container .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .auth-buttons-container .neon-button:hover {
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-  }
-
   .login-form input {
     padding: 10px;
   }
 
   .login-form button {
     padding: 10px;
-  }
-
-  .auth-buttons-container .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .auth-buttons-container .neon-button:hover {
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
   }
 
   .profile-container {
