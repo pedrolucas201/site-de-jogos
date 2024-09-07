@@ -1,7 +1,6 @@
 /* Estilos Globais */
 
 
-
 @media (max-width: 768px) {
   body {
     font-size: 16px;
@@ -472,6 +471,13 @@ footer {
 
 /* Switch de tema */
 
+@media (max-width: 768px) {
+  .theme-switcher {
+    top: 10px;
+    right: 10px;
+  }
+}
+
 .theme-switcher {
   position: absolute;
   top: 20px;
@@ -521,6 +527,22 @@ footer.light-theme {
 }
 
 /* Barra de Pesquisa */
+
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .search-bar button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
  
 .search-bar {
   display: flex;
