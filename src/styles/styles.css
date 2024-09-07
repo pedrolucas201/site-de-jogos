@@ -10,6 +10,13 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Container principal */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Cabeçalho */
 header {
   background-color: #1a1a1a;
@@ -53,6 +60,7 @@ nav ul li a:hover {
   gap: 16px;
   padding: 20px;
   border-radius: 12px;
+  margin-bottom: 80px;
 }
 
 /* Card de Jogos */
@@ -66,9 +74,11 @@ nav ul li a:hover {
   text-align: center;
   width: 200px;
   height: 200px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
 
 .game-card:hover {
@@ -507,6 +517,22 @@ a:hover {
 
 .logout-button:hover {
   background-color: #ff0000;
+}
+
+/* Estilos para o container de autenticação */
+
+.auth-buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.auth-buttons .neon-button {
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 

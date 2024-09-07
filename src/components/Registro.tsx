@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { auth } from '../firebaseConfig'; // Certifique-se de que está importando auth corretamente
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'; // Adicione updateProfile para o nome de usuário
+import { auth } from '../firebaseConfig';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import '../styles/styles.css';
 
 const Registro: React.FC = () => {
-  const [username, setUsername] = useState<string>(''); // Novo campo para o nome de usuário
+  const [username, setUsername] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
@@ -18,16 +18,16 @@ const Registro: React.FC = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Adiciona o nome de usuário no perfil do Firebase
       if (auth.currentUser) {
         await updateProfile(auth.currentUser, { displayName: username });
       }
 
       setSuccess(true);
-      setError(null); // Limpa o erro caso o registro seja bem-sucedido
+      setError(null);
+
       navigate('/'); // Redireciona para a home após o registro
     } catch (err: any) {
-      setError(err.message); // Mostra o erro, se houver
+      setError(err.message);
       setSuccess(false);
     }
   };

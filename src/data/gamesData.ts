@@ -89,7 +89,7 @@ export interface Game {
       title: 'Last Day on Earth Survival',
       thumbnail: '/images/lastdayonearthsurvival.jpg',
       iframeUrl: 'https://html5.gamedistribution.com/b25cc9c430f74911a7b21254965dbee5/?gd_sdk_referrer_url=https://gamedistribution.com/games/last-day-on-earth-survival/',
-      category: 'avenutra',
+      category: 'aventura',
     },
     {
       id: 'jogo13',
@@ -147,6 +147,62 @@ export interface Game {
       iframeUrl: 'https://html5.gamedistribution.com/27673bc45d2e4b27b7cd24e422f7c257/?gd_sdk_referrer_url=https://gamedistribution.com/games/Bubble-Game-3/',
       category: 'shooter',
     },
+    {
+      id: 'jogo21',
+      title: 'Moto X3M Bike Race Game',
+      thumbnail: '/images/motox3mbikeracegame.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/5b0abd4c0faa4f5eb190a9a16d5a1b4c/?gd_sdk_referrer_url=https://gamedistribution.com/games/moto-x3m-bike-race-game/',
+      category: 'aventura',
+    },
+    { 
+      id: 'jogo22',
+      title: 'Traffic Jam 3D',
+      thumbnail: '/images/trafficjam3d.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/337302b23b5943d8bcfc501d81d50cdb/?gd_sdk_referrer_url=https://gamedistribution.com/games/traffic-jam-3d/',
+      category: 'aventura',
+    },
+    {
+      id: 'jogo23',
+      title: 'Four Colors Multiplayer',
+      thumbnail: '/images/fourcolorsmultiplayer.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/f2520bae00624e93a4f4614732fa259e/?gd_sdk_referrer_url=https://gamedistribution.com/games/four-colors-multiplayer/',
+      category: 'puzzle',
+    },
+    {
+      id: 'jogo24',
+      title: 'Penalty Shooters 2',
+      thumbnail: '/images/penaltyshooters2.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/571b9df027e449f78e3869ba19658754/?gd_sdk_referrer_url=https://gamedistribution.com/games/Penalty-Shooters-2/',
+      category: 'acao',
+    },
+    {
+      id: 'jogo25',
+      title: 'Apple Shooter 1',
+      thumbnail: '/images/appleshooter1.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/f85e3e02194545208fa52da0c0992362/?gd_sdk_referrer_url=https://gamedistribution.com/games/Apple-Shooter/',
+      category: 'shooter',
+    },
+    {
+      id: 'jogo26',
+      title: '8 Ball Pool Challenge',
+      thumbnail: '/images/8ballpoolchallenge.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/50a8e5775cf8476992f756811468bcbd/?gd_sdk_referrer_url=https://gamedistribution.com/games/8-ball-pool-challenge/',
+      category: 'casual',
+    },
+    {
+      id: 'jogo27',
+      title: 'Tomb Runner',
+      thumbnail: '/images/tombrunner.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/f2af2ecc05a445edb6862c589e996a7e/?gd_sdk_referrer_url=https://gamedistribution.com/games/Tomb-Runner/',
+      category: 'aventura',
+    },
+    {
+      id: 'jogo28',
+      title: 'Head Soccer 2023',
+      thumbnail: '/images/headsoccer2023.jpg',
+      iframeUrl: 'https://html5.gamedistribution.com/30d4a2b0a84242ba9844124d1b2401d2/?gd_sdk_referrer_url=https://gamedistribution.com/games/head-soccer-2023/',
+      category: 'casual',
+    }
     
 
     // Outros jogos...

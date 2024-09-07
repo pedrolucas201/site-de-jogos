@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import GameCard from '../components/GameCard';
 import { games } from '../data/gamesData';
 import SearchBar from '../components/SearchBar';
 import { Helmet } from 'react-helmet';
-import { auth } from '../firebaseConfig'; // Importando Firebase auth
-import { FaUserCircle } from 'react-icons/fa'; // Ícone de perfil
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../firebaseConfig';
 
 const Home: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [user, setUser] = useState<any>(null); // Estado para armazenar o usuário logado
+  const [user] = useAuthState(auth); // Verifica o estado de autenticação
 
   const handleSearch = (query: string) => {
     setSearchQuery(query.toLowerCase());
@@ -18,15 +18,6 @@ const Home: React.FC = () => {
   const filteredGames = games.filter(game =>
     game.title.toLowerCase().includes(searchQuery)
   );
-
-  // Verifica se o usuário está logado
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
-      setUser(currentUser);
-    });
-
-    return () => unsubscribe();
-  }, []);
 
   return (
     <div>
@@ -57,28 +48,26 @@ const Home: React.FC = () => {
             <li>
               <Link to="/category/shooter">Atirador</Link>
             </li>
-            {/* Mostrar apenas se o usuário NÃO estiver logado */}
-            {!user && (
-              <>
-                <li>
-                  <Link to="/login" className="neon-button">Login</Link> {/* Link para Login */}
-                </li>
-                <li>
-                  <Link to="/register" className="neon-button">Registrar</Link> {/* Link para Registro */}
-                </li>
-              </>
-            )}
-            {/* Ícone de perfil, visível apenas quando o usuário está logado */}
-            {user && (
-              <div className="profile-container">
-                <Link to="/perfil">
-                  <FaUserCircle className="profile-icon" /> {/* Ícone de perfil */}
-                </Link>
-              </div>
-            )}
           </ul>
         </nav>
       </header>
+      <div className="auth-buttons">
+        {!user && (
+          <>
+            <Link to="/login" className="neon-button">
+              Login
+            </Link>
+            <Link to="/register" className="neon-button">
+              Registrar
+            </Link>
+          </>
+        )}
+        {user && (
+          <Link to="/perfil" className="neon-button">
+            Perfil
+          </Link>
+        )}
+      </div>
       <main>
         <section className="games-grid">
           {filteredGames.map(game => (

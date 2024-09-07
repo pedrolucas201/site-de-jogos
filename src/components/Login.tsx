@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { auth } from '../firebaseConfig';
 import { signInWithEmailAndPassword, UserCredential } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 import '../styles/styles.css';
 
 const Login: React.FC = () => {
@@ -8,6 +9,7 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -15,6 +17,8 @@ const Login: React.FC = () => {
       console.log('Logged in user:', userCredential.user);
       setSuccess(true);
       setError(null);
+
+      navigate('/'); // Redireciona para a home após o login
     } catch (error: any) {
       console.error('Error during login:', error);
       setError(error.message);
