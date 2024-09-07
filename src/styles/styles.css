@@ -1,12 +1,12 @@
 /* Estilos Globais */
 body {
   font-family: Poppins, sans-serif;
-  background-color: #0f0f0f; /* Fundo escuro */
+  background-color: #0f0f0f; 
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  color: #00ffff; /* Texto Neon Ciano */
+  color: #00ffff; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -31,7 +31,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Responsividade */
+  flex-wrap: wrap; 
 }
 
 nav ul li {
@@ -60,7 +60,7 @@ nav ul li a:hover {
   gap: 16px;
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 80px;
+  z-index: 2;
 }
 
 /* Card de Jogos */
@@ -112,8 +112,9 @@ footer {
   background-color: #1a1a1a;
   color: #00ffff;
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  z-index: 1; 
+  flex-shrink: 0;
 }
 
 /* Botão de voltar para a página inicial */
@@ -329,8 +330,134 @@ a:hover {
   .register-form button {
     padding: 10px;
   }
-}
 
+  .search-bar input[type="text"] {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .search-bar button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .neon-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .neon-button:hover {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+
+  .back-to-home-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .theme-switcher {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .auth-buttons .neon-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .auth-buttons .neon-button:hover {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+
+  .game-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .game-card img {
+    border-radius: 6px;
+  }
+
+  .game-card.light-theme {
+    box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
+  }
+
+  .game-card.light-theme h3 {
+    color: #ff00ff;
+  }
+
+  .back-to-home-button.light-theme {
+    background-color: #00ffff;
+    color: #0f0f0f;
+  }
+
+  .search-bar input[type="text"]:focus {
+    border-color: #ff00ff;
+  }
+
+  .register-form input {
+    padding: 10px;
+  }
+
+  .register-form button {
+    padding: 10px;
+  }
+
+  .error-message {
+    margin-bottom: 10px;
+  }
+
+  .success-message {
+    margin-bottom: 10px;
+  }
+
+  .auth-buttons-container .neon-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .auth-buttons-container .neon-button:hover {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+
+  .login-form input {
+    padding: 10px;
+  }
+
+  .login-form button {
+    padding: 10px;
+  }
+
+  .auth-buttons-container .neon-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .auth-buttons-container .neon-button:hover {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-icon {
+    font-size: 2rem;
+  }
+
+  .profile-content {
+    font-size: 1rem;
+  }
+
+  .logout-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+ 
+
+
+}
 
 /* Estilos para o container de login */
 .login-container {
@@ -427,11 +554,11 @@ a:hover {
 /* Estilizando a seção dos botões no topo */
 .auth-buttons-container {
   position: absolute;
-  top: 10px; /* Ajuste conforme necessário */
+  top: 10px; 
   left: 20px;
   display: flex;
   gap: 15px;
-  z-index: 1000; /* Para garantir que fique sobre outros elementos */
+  z-index: 1000; 
 }
 
 .auth-buttons-container .neon-button {
@@ -457,12 +584,12 @@ a:hover {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 1000; /* Garante que fique por cima de outros elementos */
+  z-index: 1000; 
 }
 
 .profile-icon {
-  font-size: 2.5rem; /* Tamanho do ícone */
-  color: #fff; /* Cor do ícone */
+  font-size: 2.5rem; 
+  color: #fff; 
   cursor: pointer;
 }
 
@@ -492,14 +619,14 @@ a:hover {
 .profile-content {
   flex-grow: 1;
   display: flex;
-  flex-direction: column; /* Alinha os elementos verticalmente */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
 }
 
 .profile-content p {
-  margin-bottom: 10px; /* Garante que os parágrafos fiquem um abaixo do outro */
+  margin-bottom: 10px; 
 }
 
 .logout-button {
@@ -534,7 +661,3 @@ a:hover {
   margin-bottom: 10px;
   display: inline-block;
 }
-
-
-
-
