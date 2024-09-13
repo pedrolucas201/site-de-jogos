@@ -13,6 +13,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Container principal */
 #root {
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 nav ul li {
@@ -56,11 +57,13 @@ nav ul li a:hover {
 
 /* Grid de Jogos */
 .games-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   padding: 20px;
   border-radius: 12px;
+  z-index: 2;
 }
 
 /* Card de Jogos */
@@ -70,9 +73,15 @@ nav ul li a:hover {
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  width: 100%;
   overflow: hidden;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+  justify-content: space-between;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
 
 .game-card:hover {
@@ -132,6 +141,14 @@ footer {
 }
 
 /* Switch de tema */
+
+@media (max-width: 768px) {
+  .theme-switcher {
+    top: 10px;
+    right: 10px;
+  }
+}
+
 .theme-switcher {
   position: absolute;
   top: 20px;
@@ -171,18 +188,40 @@ footer.light-theme {
   box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
 }
 
+.game-card.light-theme h3 {
+  color: #ff00ff;
+}
+
 .back-to-home-button.light-theme {
   background-color: #00ffff;
   color: #0f0f0f;
 }
 
 /* Barra de Pesquisa */
+
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .search-bar button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+ 
 .search-bar {
   display: flex;
   justify-content: center;
   margin: 20px 0;
   padding: 10px;
   border-radius: 8px;
+  font: Poppins, sans-serif;
 }
 
 .search-bar input[type="text"] {
@@ -190,9 +229,12 @@ footer.light-theme {
   font-size: 16px;
   border: 2px solid #00ffcc;
   border-radius: 8px;
+  outline: none;
   background-color: #2c2c2c;
   color: #00ffcc;
   flex-grow: 1;
+  max-width: 300px;
+  font: Poppins, sans-serif;
 }
 
 .search-bar button {
@@ -208,6 +250,10 @@ footer.light-theme {
 
 .search-bar input[type="text"]:focus {
   border-color: #ff00ff;
+}
+
+.search-input ::placeholder{
+  font: Poppins, sans-serif;
 }
 
 /* Estilos para Botões Neon */
@@ -228,18 +274,95 @@ footer.light-theme {
   box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
 }
 
-/* Responsividade para telas menores */
+/* Estilos para o container de registro */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form input {
+  padding: 15px;
+  font-size: 16px;
+  background-color: #222;
+  border: none;
+  border-bottom: 2px solid #39ff14;
+  color: white;
+  outline: none;
+}
+
+.register-form input:focus {
+  border-color: #00ffff;
+}
+
+.register-form button {
+  padding: 15px;
+  background-color: #39ff14;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #00ffff;
+}
+
+.error-message {
+  color: #ff073a;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+p {
+  color: #fff;
+}
+
+a {
+  color: #39ff14;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ffff;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .games-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  .register-container {
+    padding: 20px;
   }
 
-  .game-card {
-    padding: 12px;
+  .register-form input {
+    padding: 10px;
   }
 
-  nav ul {
-    flex-direction: column;
+  .register-form button {
+    padding: 10px;
   }
 
   .search-bar input[type="text"] {
@@ -257,6 +380,10 @@ footer.light-theme {
     font-size: 16px;
   }
 
+  .neon-button:hover {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+
   .back-to-home-button {
     padding: 8px 16px;
     font-size: 16px;
@@ -266,10 +393,78 @@ footer.light-theme {
     padding: 8px 16px;
     font-size: 16px;
   }
+
+  .auth-buttons .neon-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .auth-buttons .neon-button:hover {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+
+  .game-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .game-card img {
+    border-radius: 6px;
+  }
+
+  .game-card.light-theme {
+    box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
+  }
+
+  .game-card.light-theme h3 {
+    color: #ff00ff;
+  }
+
+  .back-to-home-button.light-theme {
+    background-color: #00ffff;
+    color: #0f0f0f;
+  }
+
+  .search-bar input[type="text"]:focus {
+    border-color: #ff00ff;
+  }
+
+  .error-message {
+    margin-bottom: 10px;
+  }
+
+  .success-message {
+    margin-bottom: 10px;
+  }
+
+  .login-form input {
+    padding: 10px;
+  }
+
+  .login-form button {
+    padding: 10px;
+  }
+
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-icon {
+    font-size: 2rem;
+  }
+
+  .profile-content {
+    font-size: 1rem;
+  }
+
+  .logout-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
 }
 
-/* Estilos para Login e Registro */
-.register-container,
+/* Estilos para o container de login */
 .login-container {
   display: flex;
   flex-direction: column;
@@ -278,9 +473,14 @@ footer.light-theme {
   height: 100vh;
   background-color: #0d0d0d;
   color: #fff;
+  font-family: 'Press Start 2P', cursive;
 }
 
-.register-form,
+h1 {
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -289,7 +489,6 @@ footer.light-theme {
   max-width: 400px;
 }
 
-.register-form input,
 .login-form input {
   padding: 15px;
   font-size: 16px;
@@ -300,7 +499,10 @@ footer.light-theme {
   outline: none;
 }
 
-.register-form button,
+.login-form input:focus {
+  border-color: #00ffff;
+}
+
 .login-form button {
   padding: 15px;
   background-color: #39ff14;
@@ -312,14 +514,155 @@ footer.light-theme {
   transition: background-color 0.3s ease;
 }
 
+.login-form button:hover {
+  background-color: #00ffff;
+}
+
+.error-message {
+  color: #ff073a;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+p {
+  color: #fff;
+}
+
+a {
+  color: #39ff14;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ffff;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .register-form input,
+  .login-container {
+    padding: 20px;
+  }
+
   .login-form input {
     padding: 10px;
   }
 
-  .register-form button,
   .login-form button {
     padding: 10px;
   }
+}
+
+/* Estilizando a seção dos botões no topo */
+.auth-buttons-container {
+  position: absolute;
+  top: 10px; 
+  left: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000; 
+}
+
+.auth-buttons-container .neon-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons-container .neon-button:hover {
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  border-color: #00f6ff;
+}
+
+/* Estilos para o container de perfil */
+.profile-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; 
+}
+
+.profile-icon {
+  font-size: 2.5rem; 
+  color: #fff; 
+  cursor: pointer;
+}
+
+.profile-page {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Estilos para o container de informações do usuário */
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+}
+
+.profile-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.profile-content p {
+  margin-bottom: 10px; 
+}
+
+.logout-button {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+
+.logout-button:hover {
+  background-color: #ff0000;
+}
+
+/* Estilos para o container de autenticação */
+
+.auth-buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.auth-buttons .neon-button {
+  margin-bottom: 10px;
+  display: inline-block;
 }
