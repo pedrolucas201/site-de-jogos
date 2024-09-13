@@ -625,4 +625,151 @@ a:hover {
     width: 150px;
     height: 150px; /* Ajuste adicional em telas muito pequenas */
   }
+
+  .game-card {
+    width: 120px;
+    height: 120px; /* Ajuste adicional em telas muito pequenas */
+  }
+
+  .auth-buttons {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .auth-buttons .neon-button {
+    margin-bottom: 10px;
+  }
+
+  .auth-buttons-container {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .games-grid {
+    gap: 20px; /* Reduzido o espaçamento para telas menores */
+  }
+
+  .game-card {
+    width: 180px;
+    height: 180px; /* Ajuste de tamanho dos cards em telas menores */
+  }
+
+  .profile-container {
+    margin: 10px;
+  }
+
+  .profile-content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .game-card {
+    width: 120px;
+    height: 120px; /* Ajuste adicional em telas muito pequenas */
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-buttons {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .auth-buttons .neon-button {
+    margin-bottom: 10px;
+  }
+
+  .auth-buttons-container {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .games-grid {
+    gap: 20px; /* Reduzido o espaçamento para telas menores */
+  }
+
+  .game-card {
+    width: 180px;
+    height: 180px; /* Ajuste de tamanho dos cards em telas menores */
+  }
+
+  .profile-container {
+    margin: 10px;
+  }
+
+  .profile-content {
+    font-size: 1rem;
+  }
+
+  .profile-content p {
+    font-size: 0.8rem;
+  }
+
+  .logout-button {
+    font-size: 0.8rem;
+  }
+
+  .auth-buttons-container {
+    flex-direction: column;
+    right: 10px; /* Ajustado para evitar sobreposição em telas menores */
+  }
+
+  .games-grid {
+    gap: 20px; /* Reduzido o espaçamento para telas menores */
+  }
+
+  .game-card {
+    width: 180px;
+    height: 180px; /* Ajuste de tamanho dos cards em telas menores */
+  }
+
+  .game-card {
+    width: 150px;
+    height: 150px; /* Ajuste adicional em telas muito pequenas */
+  }
+
+  .game-card {
+    width: 120px;
+    height: 120px; /* Ajuste adicional em telas muito pequenas */
+  }
+
+  .auth-buttons {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .auth-buttons .neon-button {
+    margin-bottom: 10px;
+  }
+
+  .auth-buttons-container {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .games-grid {
+    gap: 20px; /* Reduzido o espaçamento para telas menores */
+  }
+
+  .game-card {
+    width: 180px;
+    height: 180px; /* Ajuste de tamanho dos cards em telas menores */
+  }
+
+  .profile-container {
+    margin: 10px;
+  }
+
+  .profile-content {
+    font-size: 1rem;
+  } 
+
+  .profile-content p {
+    font-size: 0.8rem;
+  }
+
+  .logout-button {
+    font-size: 0.8rem;
+  }
 }
