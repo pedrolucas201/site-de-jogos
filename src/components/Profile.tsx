@@ -4,20 +4,30 @@ import { getUserProfile, UserProfile } from '../services/userService';
 
 const Profile: React.FC = () => {
   const [userData, setUserData] = useState<UserProfile | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const user = auth.currentUser;
-      if (user) {
-        const profile = await getUserProfile(user.uid);
-        setUserData(profile || null);
+      try {
+        const user = auth.currentUser;
+        if (user) {
+          const profile = await getUserProfile(user.uid);
+          setUserData(profile || null);
+        }
+      } catch (err) {
+        setError('Failed to fetch user data');
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchUserData();
   }, []);
 
-  if (!userData) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+  if (!userData) return <div>No user data available</div>;
 
   return (
     <div>
