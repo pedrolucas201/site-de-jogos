@@ -27,6 +27,9 @@ header {
   padding: 10px 0;
   text-align: center;
   width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 1;
 }
 
 nav ul {
@@ -35,10 +38,12 @@ nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; 
+  gap: 15px;
 }
 
 nav ul li {
   margin: 0 15px;
+  display: inline-block;
 }
 
 nav ul li a {
@@ -64,6 +69,11 @@ nav ul li a:hover {
   padding: 20px;
   border-radius: 12px;
   z-index: 2;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
 }
 
 /* Card de Jogos */
@@ -82,6 +92,9 @@ nav ul li a:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .game-card:hover {
@@ -93,6 +106,7 @@ nav ul li a:hover {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* Contêiner do Iframe */
@@ -106,6 +120,7 @@ nav ul li a:hover {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
   transition: box-shadow 0.3s ease;
+  z-index: 1;
 }
 
 /* Rodapé */
@@ -134,6 +149,7 @@ footer {
   cursor: pointer;
   z-index: 1000;
   transition: background-color 0.3s ease;
+  font-family: Poppins, sans-serif;
 }
 
 .back-to-home-button:hover {
@@ -142,14 +158,8 @@ footer {
 
 /* Switch de tema */
 
-@media (max-width: 768px) {
-  .theme-switcher {
-    top: 10px;
-    right: 10px;
-  }
-}
-
 .theme-switcher {
+  font-family: Poppins, sans-serif;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -198,22 +208,6 @@ footer.light-theme {
 }
 
 /* Barra de Pesquisa */
-
-@media (max-width: 768px) {
-  .search-bar {
-    padding: 10px;
-  }
-
-  .search-bar input[type="text"] {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-
-  .search-bar button {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
  
 .search-bar {
   display: flex;
@@ -267,14 +261,21 @@ footer.light-theme {
   border: 2px solid #0ff;
   text-decoration: none;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: Poppins, sans-serif;
+  z-index: 1000;
 }
 
 .neon-button:hover {
   color: #0ff;
   box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  border-color: #00f6ff;
 }
 
 /* Estilos para o container de registro */
+
 .register-container {
   display: flex;
   flex-direction: column;
@@ -351,119 +352,6 @@ a:hover {
   color: #00ffff;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .register-container {
-    padding: 20px;
-  }
-
-  .register-form input {
-    padding: 10px;
-  }
-
-  .register-form button {
-    padding: 10px;
-  }
-
-  .search-bar input[type="text"] {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .search-bar button {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .neon-button:hover {
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-  }
-
-  .back-to-home-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .theme-switcher {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .auth-buttons .neon-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .auth-buttons .neon-button:hover {
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-  }
-
-  .game-card {
-    width: 150px;
-    height: 150px;
-  }
-
-  .game-card img {
-    border-radius: 6px;
-  }
-
-  .game-card.light-theme {
-    box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
-  }
-
-  .game-card.light-theme h3 {
-    color: #ff00ff;
-  }
-
-  .back-to-home-button.light-theme {
-    background-color: #00ffff;
-    color: #0f0f0f;
-  }
-
-  .search-bar input[type="text"]:focus {
-    border-color: #ff00ff;
-  }
-
-  .error-message {
-    margin-bottom: 10px;
-  }
-
-  .success-message {
-    margin-bottom: 10px;
-  }
-
-  .login-form input {
-    padding: 10px;
-  }
-
-  .login-form button {
-    padding: 10px;
-  }
-
-  .profile-container {
-    padding: 20px;
-  }
-
-  .profile-icon {
-    font-size: 2rem;
-  }
-
-  .profile-content {
-    font-size: 1rem;
-  }
-
-  .logout-button {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-}
-
 /* Estilos para o container de login */
 .login-container {
   display: flex;
@@ -478,7 +366,7 @@ a:hover {
 
 h1 {
   color: #39ff14;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; 
 }
 
 .login-form {
@@ -541,21 +429,6 @@ a:hover {
   color: #00ffff;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .login-container {
-    padding: 20px;
-  }
-
-  .login-form input {
-    padding: 10px;
-  }
-
-  .login-form button {
-    padding: 10px;
-  }
-}
-
 /* Estilizando a seção dos botões no topo */
 .auth-buttons-container {
   position: absolute;
@@ -564,6 +437,7 @@ a:hover {
   display: flex;
   gap: 15px;
   z-index: 1000; 
+
 }
 
 .auth-buttons-container .neon-button {
@@ -576,6 +450,10 @@ a:hover {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: Poppins, sans-serif;
+  z-index: 1000;
 }
 
 .auth-buttons-container .neon-button:hover {
@@ -590,17 +468,31 @@ a:hover {
   top: 10px;
   left: 10px;
   z-index: 1000; 
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #111;
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+  font-family: Poppins, sans-serif;
+  cursor: pointer;
 }
 
 .profile-icon {
   font-size: 2.5rem; 
   color: #fff; 
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .profile-page {
   text-align: center;
   margin-top: 50px;
+  color: #fff;
+  font-family: Poppins, sans-serif;
 }
 
 /* Estilos para o container de informações do usuário */
@@ -614,11 +506,25 @@ a:hover {
   padding: 20px;
   background-color: #121212;
   color: #fff;
+  font-family: Poppins, sans-serif;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  margin: 20px;
+  text-align: center;
 }
 
 .profile-header {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  font-size: 2rem;
 }
 
 .profile-content {
@@ -628,10 +534,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .profile-content p {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #fff;
 }
 
 .logout-button {
@@ -645,6 +555,8 @@ a:hover {
   position: absolute;
   bottom: 20px;
   text-align: center;
+  transition: background-color 0.3s ease;
+  font-family: Poppins, sans-serif;
 }
 
 .logout-button:hover {
@@ -660,9 +572,57 @@ a:hover {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  z-index: 1000;
+  font-family: Poppins, sans-serif;
 }
 
 .auth-buttons .neon-button {
   margin-bottom: 10px;
   display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: Poppins, sans-serif;
+  z-index: 1000;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .auth-buttons-container {
+    flex-direction: column;
+    right: 10px; /* Ajustado para evitar sobreposição em telas menores */
+  }
+
+  .games-grid {
+    gap: 20px; /* Reduzido o espaçamento para telas menores */
+  }
+
+  .game-card {
+    width: 180px;
+    height: 180px; /* Ajuste de tamanho dos cards em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-buttons-container {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    max-width: 100%; /* Ocupe todo o espaço disponível em telas pequenas */
+  }
+
+  .game-card {
+    width: 150px;
+    height: 150px; /* Ajuste adicional em telas muito pequenas */
+  }
 }

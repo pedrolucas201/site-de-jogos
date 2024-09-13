@@ -3,6 +3,7 @@ import { auth } from '../firebaseConfig'; // Importa o auth do Firebase
 import { useNavigate } from 'react-router-dom';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import '../styles/styles.css'; // Adicionando um arquivo de estilo separado
+import BackToHomeButton from './BackToHomeButton';
 
 const Perfil: React.FC = () => {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Perfil: React.FC = () => {
       <button onClick={handleLogout} className="logout-button">
         Logout
       </button>
+      <BackToHomeButton />
     </div>
   );
 };
