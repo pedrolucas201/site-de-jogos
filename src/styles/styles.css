@@ -679,7 +679,7 @@ a:hover {
 
   .auth-buttons {
     flex-direction: row;
-    margin-left: 10px;
+    margin-left: 0;
   }
 
   .auth-buttons-container {
@@ -703,7 +703,7 @@ a:hover {
 
   .theme-switcher {
     font-size: 0.8rem; /* Ajuste de tamanho do switch de tema para telas menores */
-    margin-right: 10px; /* Ajuste de margem para telas menores */
+    margin-right: 0; /* Ajuste de margem para telas menores */
   }
 
   .search-bar {
