@@ -11,7 +11,24 @@ const Login: React.FC = () => {
   const [success, setSuccess] = useState<boolean>(false);
   const navigate = useNavigate();
 
+  const isEmailValid = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleLogin = async () => {
+    // Verifica se o e-mail é válido
+    if (!isEmailValid(email)) {
+      setError('O e-mail fornecido não é válido.');
+      return;
+    }
+
+    // Verifica se a senha não está vazia
+    if (password.trim() === '') {
+      setError('A senha não pode estar vazia.');
+      return;
+    }
+
     try {
       const userCredential: UserCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log('Logged in user:', userCredential.user);

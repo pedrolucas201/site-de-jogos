@@ -3,7 +3,6 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyDfeL4KAxexFMKQ4szoW15RQ_Bfg5WHolE",
   authDomain: "site-de-jogos-29ac5.firebaseapp.com",
@@ -17,5 +16,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
-export const firestore = getFirestore(app);
+export const firestore = getFirestore(app); // Renomeei de 'firestore' para 'db' se preferir
 const analytics = getAnalytics(app);
