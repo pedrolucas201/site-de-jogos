@@ -28,7 +28,7 @@ const Home: React.FC = () => {
     <div>
       <Helmet>
         <meta name="description" content="Encontre os melhores jogos online em nosso site!" />
-        <title>PlayBlast</title>
+        <title>Jogue Grátis Online</title>
       </Helmet>
       <Header theme={theme} toggleTheme={toggleTheme} /> {/* Passando as props */}
       <div className="auth-buttons">
