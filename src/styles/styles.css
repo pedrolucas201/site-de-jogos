@@ -3,33 +3,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-  font-family: Poppins, sans-serif;
-  background-color: #0f0f0f; 
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  color: #00ffff; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Container principal */
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* Tema escuro */
+.dark-theme {
+  background-color: #0b0c12; /* Fundo mais escuro */
+  color: #f5f5f5;
 }
 
-/* Cabeçalho */
+.dark-theme header, 
+.dark-theme footer {
+  font-family: Poppins, sans-serif;
+  background-color: #16181e;
+  color: #e6e6e6;
+}
+
+.dark-theme h1, 
+.dark-theme nav a {
+  font-family: Poppins, sans-serif;
+  color: #000000;
+}
+
+.dark-theme .search-bar input[type="text"] {
+  font-family: Poppins, sans-serif;
+  background-color: #2c2c2c;
+  color: #00ffcc;
+}
+
+.dark-theme .search-bar button {
+  background-color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+  color: white;
+}
+
+.dark-theme .theme-switcher:hover {
+  color: #00a80e;
+  text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2;
+}
+
+/* Tema claro */
+.light-theme {
+  background-color: #e3f2fd; /* Azul mais claro */
+  color: #0e0e10;
+}
+
+.light-theme header, 
+.light-theme footer {
+  font-family: Poppins, sans-serif;
+  background-color: #2d557a;
+  color: #0e0e10;
+}
+
+.light-theme h1, 
+.light-theme nav a {
+  font-family: Poppins, sans-serif;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+  color: #0e0e10;
+}
+
+.light-theme .search-bar input[type="text"] {
+  font-family: Poppins, sans-serif;
+  background-color: #2c2c2c;
+  color: #00ffcc;
+}
+
+.light-theme .search-bar button {
+  background-color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+  color: white;
+}
+
+.light-theme .theme-switcher:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+
+
+/* Estilo neon-gaming */
 header {
-  background-color: #1a1a1a;
-  color: #00ffff;
-  padding: 10px 0;
   text-align: center;
-  width: 100%;
-  position: relative;
-  flex-shrink: 0;
-  z-index: 1;
+  padding: 20px;
+  border-bottom: 3px solid #fff;
+}
+
+h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 
 nav ul {
@@ -50,17 +118,65 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #00ffff;
-  text-decoration: none;
+  font-size: 1rem; /* Tamanho ajustado para telas menores */
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+  background-color: #00ffcc;
+  color: #0e0e10;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #00bfff;
-  box-shadow: 0 6px 12px rgba(0, 255, 255, 0.6);
+  color: #ff00cc;
+  text-shadow: 0 0 5px #ff00cc, 0 0 15px #ff00cc;
+}
+
+/* Botões Neon */
+.neon-button {
+  font-size: 1rem;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #39ff14;
+  background-color: transparent;
+  cursor: pointer;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  transition: background-color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.neon-button:hover {
+  background-color: #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+
+/* Switch de Tema */
+.theme-switcher {
+  font-family: Poppins, sans-serif;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1rem;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  background-color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.theme-switcher:hover {
+  color: #ff00cc;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
 }
 
 /* Grid de Jogos */
@@ -81,7 +197,7 @@ nav ul li a:hover {
 
 /* Card de Jogos */
 .game-card {
-  background: linear-gradient(135deg, #1a1a1a 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
@@ -109,10 +225,9 @@ nav ul li a:hover {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
 
-/* Contêiner do Iframe */
+/* Contêiner de Iframe */
 .iframe-container {
   display: flex;
   justify-content: center;
@@ -123,21 +238,9 @@ nav ul li a:hover {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
   transition: box-shadow 0.3s ease;
-  z-index: 1;
 }
 
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #1a1a1a;
-  color: #00ffff;
-  position: relative;
-  z-index: 1; 
-  flex-shrink: 0;
-}
-
-/* Botão de voltar para a página inicial */
+/* Botão de Voltar para a Página Inicial */
 .back-to-home-button {
   position: fixed;
   bottom: 20px;
@@ -149,82 +252,20 @@ footer {
   color: #0f0f0f;
   font-size: 16px;
   cursor: pointer;
-  z-index: 1000;
   transition: background-color 0.3s ease;
-  font-family: Poppins, sans-serif;
 }
 
 .back-to-home-button:hover {
   background-color: #ff007f;
 }
 
-/* Switch de tema */
-
-.theme-switcher {
-  font-family: Poppins, sans-serif;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #00ffff;
-  color: #0f0f0f;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.theme-switcher:hover {
-  background-color: #00bfff;
-}
-
-/* Tema Claro */
-body.light-theme {
-  background-color: #ddd9ce;
-  color: #000000;
-}
-
-header.light-theme {
-  background-color: #00ffff;
-  color: #0f0f0f;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-  position: relative;
-  flex-shrink: 0;
-  z-index: 1;
- 
-}
-
-footer.light-theme {
-  background-color: #00ffff;
-  color: #0f0f0f;
-}
-
-.game-card.light-theme {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-  box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
-}
-
-.game-card.light-theme h3 {
-  color: #ff00ff;
-}
-
-.back-to-home-button.light-theme {
-  background-color: #00ffff;
-  color: #0f0f0f;
-}
-
 /* Barra de Pesquisa */
- 
 .search-bar {
   display: flex;
   justify-content: center;
   margin: 20px 0;
   padding: 10px;
   border-radius: 8px;
-  font: Poppins, sans-serif;
 }
 
 .search-bar input[type="text"] {
@@ -232,12 +273,8 @@ footer.light-theme {
   font-size: 16px;
   border: 2px solid #00ffcc;
   border-radius: 8px;
-  outline: none;
   background-color: #2c2c2c;
   color: #00ffcc;
-  flex-grow: 1;
-  max-width: 300px;
-  font: Poppins, sans-serif;
 }
 
 .search-bar button {
@@ -251,41 +288,8 @@ footer.light-theme {
   cursor: pointer;
 }
 
-.search-bar input[type="text"]:focus {
-  border-color: #ff00ff;
-}
-
-.search-input ::placeholder{
-  font: Poppins, sans-serif;
-}
-
-/* Estilos para Botões Neon */
-.neon-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #111;
-  border: 2px solid #0ff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: Poppins, sans-serif;
-  z-index: 1000;
-}
-
-.neon-button:hover {
-  color: #0ff;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-  border-color: #00f6ff;
-}
-
-/* Estilos para o container de registro */
-
-.register-container {
+/* Formulário de Registro */
+.register-container, .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,12 +300,7 @@ footer.light-theme {
   font-family: 'Press Start 2P', cursive;
 }
 
-h1 {
-  color: #39ff14;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-}
-
-.register-form {
+.register-form, .login-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -309,7 +308,7 @@ h1 {
   max-width: 400px;
 }
 
-.register-form input {
+.register-form input, .login-form input {
   padding: 15px;
   font-size: 16px;
   background-color: #222;
@@ -319,23 +318,23 @@ h1 {
   outline: none;
 }
 
-.register-form input:focus {
+.register-form input:focus, .login-form input:focus {
   border-color: #00ffff;
 }
 
-.register-form button {
+.register-form button, .login-form button {
   padding: 15px;
   background-color: #39ff14;
   color: black;
   font-weight: bold;
   cursor: pointer;
   border: none;
-  text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
 
-.register-form button:hover {
+.register-form button:hover, .login-form button:hover {
   background-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
 }
 
 .error-message {
@@ -413,6 +412,7 @@ h1 {
 
 .login-form button:hover {
   background-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
 }
 
 .error-message {
@@ -619,7 +619,7 @@ a:hover {
   .back-to-home-button {
     bottom: 10px; /* Ajuste de posição para telas menores */
     right: 10px; /* Ajuste de posição para telas menores */
-    padding: 10px 15px; /* Ajuste de tamanho dos botões em telas menores */
+    padding: 8px 16px; /* Ajuste de tamanho dos botões em telas menores */
     font-size: 0.8rem; 
   }
 
@@ -713,7 +713,7 @@ a:hover {
   }
 
   .logout-button {
-    padding: 10px 15px; /* Ajuste de tamanho dos botões em telas menores */
+    padding: 8px 16px; /* Ajuste de tamanho dos botões em telas menores */
     font-size: 0.8rem; 
     background-color: #ff4c4c;
     color: white;

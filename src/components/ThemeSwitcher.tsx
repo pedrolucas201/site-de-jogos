@@ -8,8 +8,10 @@ const ThemeSwitcher: React.FC = () => {
     const isHomePage = location.pathname === '/';
 
     const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
     };
+    
 
     useEffect(() => {
         document.body.className = theme === 'light' ? 'light-theme' : 'dark-theme';
