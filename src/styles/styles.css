@@ -28,7 +28,12 @@ body {
 .dark-theme nav a {
   font-family: Poppins, sans-serif;
   color: #000000;
+}
+
+.dark-theme nav ul li a {
   background-color: #39ff14;
+  color: #0e0e10;
+  padding: 10px 20px;
 }
 
 .dark-theme .search-bar input[type="text"] {
