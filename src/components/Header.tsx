@@ -15,7 +15,7 @@ const handleSearch = (query: string) => {
 const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
   return (
     <header className={theme === 'light' ? 'light-header' : 'dark-header'}>
-      <h1>Bem-vindo ao PlayBlast</h1>
+      <h1>Jogue Grátis Online</h1>
       <SearchBar onSearch={handleSearch}/>
       <nav>
         <ul>
@@ -25,6 +25,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
           <li><Link to="/category/simulacao">Simulação</Link></li>
           <li><Link to="/category/casual">Casual</Link></li>
           <li><Link to="/category/shooter">Atirador</Link></li>
+          <li><Link to="/category/mobile">Mobile</Link></li>
         </ul>
       </nav>
     </header>
