@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import GameCard from '../components/GameCard';
 import { games } from '../data/gamesData';
-import Header from '../components/Header'; // Importando o Header
+import Header from '../components/Header';
 import { Helmet } from 'react-helmet';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../firebaseConfig';
@@ -10,7 +10,7 @@ import { auth } from '../firebaseConfig';
 const Home: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [user] = useAuthState(auth); // Verifica o estado de autenticação
+  const [user] = useAuthState(auth);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query.toLowerCase());
@@ -25,12 +25,12 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="app-container"> {/* Adicione uma classe para o container */}
       <Helmet>
         <meta name="description" content="Encontre os melhores jogos online em nosso site!" />
         <title>Jogue Grátis Online</title>
       </Helmet>
-      <Header theme={theme} toggleTheme={toggleTheme} /> {/* Passando as props */}
+      <Header theme={theme} toggleTheme={toggleTheme} onSearch={handleSearch} /> {/* Passando onSearch */}
       <div className="auth-buttons">
         {!user && (
           <>
