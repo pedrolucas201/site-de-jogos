@@ -9,6 +9,9 @@ body {
   height: 100%;
   width: 100%;
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
 }
 
 /* Tema escuro */
@@ -56,7 +59,6 @@ body {
 .dark-theme .search-bar input[type="text"] {
   font-family: Poppins, sans-serif;
   background-color: #2c2c2c;
-  color: #00ffcc;
 }
 
 .dark-theme .search-bar button {
@@ -75,7 +77,40 @@ body {
   text-decoration: none;
 }
 
+.dark-theme .search-input:focus {
+  border-color: #f5f5f5;
+}
+
+.dark-theme .search-button:hover:not(:disabled) {
+  background-color: #39ff14;
+}
+
+.dark-theme .search-input {
+  border: 2px solid #39ff14;
+  color: #39ff14;
+}
+
+.dark-theme .back-home-button {
+  background-color: #39ff14;
+  color: #0e0e10;
+}
+
 /* Tema claro */
+
+
+
+.light-theme .search-input:focus {
+  border-color: #f5f5f5;
+}
+
+.light-theme .search-input {
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+}
+
+.light-theme .search-button:hover:not(:disabled) {
+  background-color: #00ffcc;
+}
 
 .light-theme game-card {
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
@@ -229,10 +264,11 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
+  margin-top: auto; /* Empurra o footer para o fundo */
+  background-color: #333; /* Ajuste conforme necessário */
+  color: white; /* Ajuste conforme necessário */
   text-align: center;
-  padding: 20px;
-  font-size: 1rem;
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+  padding: 10px; /* Ajuste conforme necessário */
 }
 
 /* Grid de Jogos */
@@ -318,31 +354,40 @@ footer {
 /* Barra de Pesquisa */
 .search-bar {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.search-input {
   padding: 10px;
-  border-radius: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #000;
+  outline: none;
+  width: 300px;
+  transition: all 0.3s ease;
 }
 
-.search-bar input[type="text"] {
-  padding: 12px 20px;
-  font-size: 16px;
-  border: 2px solid #00ffcc;
-  border-radius: 8px;
-  background-color: #2c2c2c;
-  color: #00ffcc;
-}
-
-.search-bar button {
-  background-color: #ff00ff;
-  border: 2px solid #ff00ff;
-  padding: 12px 20px;
-  font-size: 16px;
-  color: white;
-  border-radius: 8px;
+.search-button {
   margin-left: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.search-button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+
 
 /* Formulário de Registro */
 .register-container, .login-container {
@@ -391,11 +436,6 @@ footer {
 .register-form button:hover, .login-form button:hover {
   background-color: #00ffff;
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-}
-
-.error-message {
-  color: #ff073a;
-  margin-bottom: 15px;
 }
 
 .success-message {
@@ -465,11 +505,6 @@ h1 {
 .login-form button:hover {
   background-color: #00ffff;
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-}
-
-.error-message {
-  color: #ff073a;
-  margin-bottom: 15px;
 }
 
 .success-message {
@@ -666,6 +701,57 @@ a {
   font-family: Poppins, sans-serif;
   z-index: 1000;
 }
+
+/* Error Page */
+
+/* Estilos para o Componente de Erro */
+.error-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0c12; /* Fundo mais escuro */
+  color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
+}
+
+.error-title {
+  font-size: 6rem;
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+  margin: 0;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.back-home-button {
+  color: #000;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #39ff14;
+  color: #0e0e10;
+  text-decoration: none;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-home-button:hover {
+  background-color: #00a80e;
+  transform: scale(1.05);
+}
+
 
 /* Estilos responsivos */
 
