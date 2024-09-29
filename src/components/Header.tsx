@@ -1,4 +1,3 @@
-// Header.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
@@ -6,17 +5,14 @@ import SearchBar from './SearchBar';
 interface HeaderProps {
   theme: 'light' | 'dark';
   toggleTheme: () => void;
+  onSearch: (query: string) => void; // Adicionando prop para onSearch
 }
 
-const handleSearch = (query: string) => {
-    setSearchQuery(query.toLowerCase());
-  };
-
-const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
+const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, onSearch }) => {
   return (
     <header className={theme === 'light' ? 'light-header' : 'dark-header'}>
       <h1>Jogue Grátis Online</h1>
-      <SearchBar onSearch={handleSearch}/>
+      <SearchBar onSearch={onSearch} /> {/* Passando a função onSearch */}
       <nav>
         <ul>
           <li><Link to="/category/acao">Ação</Link></li>
@@ -33,7 +29,3 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
 };
 
 export default Header;
-function setSearchQuery(arg0: string) {
-    throw new Error('Function not implemented.');
-}
-
