@@ -7,6 +7,7 @@ import ThemeSwitcher from './components/ThemeSwitcher'; // Importe o ThemeSwitch
 import Login from './components/Login';
 import Registro from './components/Registro';
 import Perfil from './components/Perfil';
+import ErrorPage from './components/ErrorPage';
 
 const App: React.FC = () => {
     return (
@@ -22,7 +23,7 @@ const App: React.FC = () => {
                     
                     
                     
-                    <Route path="*" element={<div>404 - Página não encontrada</div>} />
+                    <Route path="*" element={<ErrorPage />} />
                 </Routes>
                 <ThemeSwitcher />
             </div>
