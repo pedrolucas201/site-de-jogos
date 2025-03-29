@@ -11,7 +11,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, onSearch }) => {
   return (
     <header className={theme === 'light' ? 'light-header' : 'dark-header'}>
-      <h1>Jogue Grátis Online</h1>
+      <h1>Press 2 Play</h1>
       <SearchBar onSearch={onSearch} /> {/* Passando a função onSearch */}
       <nav>
         <ul>
@@ -22,6 +22,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, onSearch }) => {
           <li><Link to="/category/casual">Casual</Link></li>
           <li><Link to="/category/shooter">Atirador</Link></li>
           <li><Link to="/category/mobile">Mobile</Link></li>
+          <li><Link to="/category/racing">Corrida</Link></li>
         </ul>
       </nav>
     </header>
