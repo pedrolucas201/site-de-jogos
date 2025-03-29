@@ -28,10 +28,10 @@ const Home: React.FC = () => {
     <div className="app-container"> {/* Adicione uma classe para o container */}
       <Helmet>
         <meta name="description" content="Encontre os melhores jogos online em nosso site!" />
-        <title>Jogue Grátis Online</title>
+        <title>Press 2 Play</title>
       </Helmet>
       <Header theme={theme} toggleTheme={toggleTheme} onSearch={handleSearch} /> {/* Passando onSearch */}
-      <div className="auth-buttons">
+      {/* <div className="auth-buttons">
         {!user && (
           <>
             <Link to="/login" className="neon-button">Login</Link>
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         {user && (
           <Link to="/perfil" className="neon-button">Perfil</Link>
         )}
-      </div>
+      </div> */}
       <main>
         <section className="games-grid">
           {filteredGames.map(game => (
