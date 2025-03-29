@@ -8,267 +8,81 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  min-height: 100vh;
-  flex-direction: column;
+  background-color: #f5f5f5;
+  color: #333;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Tema escuro */
-
-.dark-theme .game-card {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-  box-shadow: 0 4px 8px #39ff14;
-}
-
-.dark-theme .game-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px #39ff14;
-}
-
-.dark-theme {
-  background-color: #0b0c12; /* Fundo mais escuro */
-  color: #f5f5f5;
-}
-
-.dark-theme header, 
-.dark-theme footer {
-  font-family: Poppins, sans-serif;
-  background-color: #16181e;
-  color: #e6e6e6;
-}
-
-.dark-theme h1{
-  font-family: Poppins, sans-serif;
-  color: #000000;
-
-}
-
-.dark-theme nav ul li a {
-  font-family: Poppins, sans-serif;
-  background-color: #39ff14;
-  color: #0e0e10;
-  padding: 10px 20px;
-}
-
-.dark-theme nav ul li a:hover {
-  color: #7f977b;
-  text-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14;
-}
-
-.dark-theme .search-bar input[type="text"] {
-  font-family: Poppins, sans-serif;
-  background-color: #2c2c2c;
-}
-
-.dark-theme .search-bar button {
-  background-color: #2c2c2c;
-  border: 2px solid #2c2c2c;
-  color: white;
-}
-
-.dark-theme .theme-switcher:hover {
-  color: #00a80e;
-  text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2;
-}
-
-.dark-theme a {
-  color: #39ff14;
-  text-decoration: none;
-}
-
-.dark-theme .search-input:focus {
-  border-color: #f5f5f5;
-}
-
-.dark-theme .search-button:hover:not(:disabled) {
-  background-color: #39ff14;
-}
-
-.dark-theme .search-input {
-  border: 2px solid #39ff14;
-  color: #39ff14;
-}
-
-.dark-theme .back-home-button {
-  background-color: #39ff14;
-  color: #0e0e10;
-}
-
-/* Tema claro */
-
-
-
-.light-theme .search-input:focus {
-  border-color: #f5f5f5;
-}
-
-.light-theme .search-input {
-  border: 2px solid #00ffcc;
-  color: #00ffcc;
-}
-
-.light-theme .search-button:hover:not(:disabled) {
-  background-color: #00ffcc;
-}
-
-.light-theme game-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-  box-shadow: 0 4px 8px #00ffcc;
-}
-
-.light-theme game-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px #00ffcc;
-}
-
-.light-theme nav ul li a {
-  font-family: Poppins, sans-serif;
-  background-color: #00ffcc;
-  color: #0e0e10;
-  padding: 10px 20px;
-}
-
-.light-theme nav ul li a:hover {
-  color: #7f977b;
-  text-shadow: 0 0 5px #00ffcc, 0 0 15px #00ffcc;
-}
-
-.light-theme a {
-  color: #00ffcc;
-  text-decoration: none;
-}
-
-.light-theme {
-  background-color: #e3f2fd; /* Azul mais claro */
-  color: #0e0e10;
-}
-
-.light-theme header, 
-.light-theme footer {
-  font-family: Poppins, sans-serif;
-  background-color: #2d557a;
-  color: #0e0e10;
-}
-
-.light-theme h1, 
-.light-theme nav a {
-  font-family: Poppins, sans-serif;
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-  color: #0e0e10;
-}
-
-.light-theme .search-bar input[type="text"] {
-  font-family: Poppins, sans-serif;
-  background-color: #2c2c2c;
-  color: #00ffcc;
-}
-
-.light-theme .search-bar button {
-  background-color: #2c2c2c;
-  border: 2px solid #2c2c2c;
-  color: white;
-}
-
-.light-theme .theme-switcher:hover {
-  color: #00ffcc;
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-}
-
-
-
-/* Estilo neon-gaming */
+/* Header */
 header {
   text-align: center;
   padding: 20px;
-  border-bottom: 3px solid #fff;
+  border-bottom: 1px solid #ddd;
 }
 
 h1 {
-  font-family: Poppins, sans-serif;
-  font-size: 3rem;
-  color: #fff;
-  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  font-size: 2rem;
+  color: #333;
 }
 
+/* Navegação */
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
   gap: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  z-index: 1;
-}
-
-nav ul li {
-  margin: 0 15px;
-  display: inline-block;
+  margin: 10px 0;
 }
 
 nav ul li a {
-  font-size: 1rem; /* Tamanho ajustado para telas menores */
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-  background-color: #00ffcc;
-  color: #0e0e10;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ff00cc;
-  text-shadow: 0 0 5px #ff00cc, 0 0 15px #ff00cc;
+  background-color: #ddd;
 }
 
-/* Botões Neon */
-.neon-button {
-  font-size: 1rem;
-  color: #fff;
+/* Botões */
+button {
   padding: 10px 20px;
-  border: 2px solid #39ff14;
-  background-color: transparent;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
   cursor: pointer;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
-  transition: background-color 0.3s ease, text-shadow 0.3s ease;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.neon-button:hover {
-  background-color: #39ff14;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+button:hover {
+  background-color: #eee;
 }
 
-
-/* Switch de Tema */
+/* Botão de Troca de Tema */
 .theme-switcher {
-  font-family: Poppins, sans-serif;
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
+  padding: 10px 15px;
   font-size: 1rem;
-  padding: 10px;
-  color: #fff;
+  background-color: #ccc;
+  color: #333;
   border: none;
-  background-color: #000000;
   border-radius: 5px;
   cursor: pointer;
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .theme-switcher:hover {
-  color: #ff00cc;
-  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
-}
-
-/* Footer */
-footer {
-  margin-top: auto; /* Empurra o footer para o fundo */
-  background-color: #333; /* Ajuste conforme necessário */
-  color: white; /* Ajuste conforme necessário */
-  text-align: center;
-  padding: 10px; /* Ajuste conforme necessário */
+  background-color: #bbb;
 }
 
 /* Grid de Jogos */
@@ -278,611 +92,269 @@ footer {
   justify-content: center;
   gap: 16px;
   padding: 20px;
-  border-radius: 12px;
-  z-index: 2;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
-  transition: box-shadow 0.3s ease;
 }
 
-/* Card de Jogos */
 .game-card {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
   text-align: center;
   width: 200px;
   height: 200px;
-  flex-direction: column;
-  justify-content: space-between;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .game-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .game-card img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-}
-
-/* Contêiner de Iframe */
-.iframe-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
-  transition: box-shadow 0.3s ease;
-}
-
-/* Botão de Voltar para a Página Inicial */
-.back-to-home-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #ffffff;
-  color: #0f0f0f;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.back-to-home-button:hover {
-  background-color: #ff007f;
+  border-radius: 4px;
 }
 
 /* Barra de Pesquisa */
 .search-bar {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
 .search-input {
   padding: 10px;
-  font-size: 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #000;
-  outline: none;
   width: 300px;
-  transition: all 0.3s ease;
 }
 
 .search-button {
   margin-left: 10px;
   padding: 10px 15px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #00ffff;
-  border: none;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.search-button:disabled {
-  background-color: #888;
-  cursor: not-allowed;
+.search-button:hover {
+  background-color: #eee;
 }
 
-
-
-/* Formulário de Registro */
-.register-container, .login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #0d0d0d;
-  color: #fff;
-  font-family: 'Press Start 2P', cursive;
-}
-
-.register-form, .login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.register-form input, .login-form input {
-  padding: 15px;
-  font-size: 16px;
-  background-color: #222;
-  border: none;
-  border-bottom: 2px solid #39ff14;
-  color: white;
-  outline: none;
-}
-
-.register-form input:focus, .login-form input:focus {
-  border-color: #00ffff;
-}
-
-.register-form button, .login-form button {
-  padding: 15px;
-  background-color: #39ff14;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.register-form button:hover, .login-form button:hover {
-  background-color: #00ffff;
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-}
-
-.success-message {
-  color: #39ff14;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-}
-
-p {
-  color: #fff;
-}
-
-a {
-  color: #39ff14;
-  text-decoration: none;
-}
-
-/* Estilos para o container de login */
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #0d0d0d;
-  color: #fff;
-  font-family: 'Press Start 2P', cursive;
-}
-
-h1 {
-  color: #39ff14;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; 
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.login-form input {
-  padding: 15px;
-  font-size: 16px;
-  background-color: #222;
-  border: none;
-  border-bottom: 2px solid #39ff14;
-  color: white;
-  outline: none;
-}
-
-.login-form input:focus {
-  border-color: #00ffff;
-}
-
-.login-form button {
-  padding: 15px;
-  background-color: #39ff14;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-}
-
-.login-form button:hover {
-  background-color: #00ffff;
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-}
-
-.success-message {
-  color: #39ff14;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-}
-
-p {
-  color: #fff;
-}
-
-a {
-  color: #39ff14;
-  text-decoration: none;
-}
-
-/* Estilizando a seção dos botões no topo */
-.auth-buttons-container {
-  position: absolute;
-  top: 10px; 
-  left: 20px;
-  display: flex;
-  gap: 15px;
-  z-index: 1000; 
-
-}
-
-.auth-buttons-container .neon-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #111;
-  border: 2px solid #0ff;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: Poppins, sans-serif;
-  z-index: 1000;
-}
-
-.auth-buttons-container .neon-button:hover {
-  color: #0ff;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-  border-color: #00f6ff;
-}
-
-/* Estilos para o container de perfil */
-.profile-page {
-  padding: 20px;
-  background-color: #1e1e2f;
-  color: #ffffff;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.profile-header {
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #f5f5f5;
+  color: #333;
   text-align: center;
-}
-
-.score-section {
-  background-color: #282c34;
   padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.games-played {
-  margin-top: 20px;
-}
-
-.game-item {
-  background-color: #2e2e3a;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.logout-button {
-  background-color: #d9534f;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: 20px auto;
-}
-
-.logout-button:hover {
-  background-color: #c9302c;
-}
-
-
-/* Estilos para o container de informações do usuário */
-
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-  background-color: #121212;
-  color: #fff;
-  font-family: Poppins, sans-serif;
-  transition: background-color 0.3s ease;
-  z-index: 1;
+  border-top: 1px solid #ddd;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
-  border-radius: 12px;
-  margin: 20px;
-  text-align: center;
 }
 
-.profile-header {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-  font-size: 2rem;
-}
-
-.profile-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.profile-content p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #fff;
-}
-
-.logout-button {
-  background-color: #ff4c4c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  position: absolute;
+/* Botão de Voltar para Home */
+.back-to-home-button {
+  display: inline-block;
+  position: fixed;
   bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff; /* Azul para destaque */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;
-  transition: background-color 0.3s ease;
-  font-family: Poppins, sans-serif;
 }
 
-.logout-button:hover {
-  background-color: #ff0000;
+.back-to-home-button:hover {
+  background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
-/* Estilos para o container de autenticação */
+/* Tema Escuro */
+.dark-theme {
+  background-color: #181818; /* Fundo mais suave */
+  color: #e0e0e0; /* Texto com contraste melhor */
+}
 
-.auth-buttons {
+.dark-theme h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e0e0e0; /* Cor clara para contraste no fundo escuro */
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil para destaque */
+}
+
+.dark-theme h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e0e0e0; /* Cor clara para contraste no fundo escuro */
+  margin: 10px 0;
+  text-align: center;
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Esconde o texto que não cabe */
+  text-overflow: ellipsis; /* Adiciona reticências (...) */
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil para destaque */
+  font-family: 'Press Start 2P', cursive; /* Fonte de destaque */
+}
+
+.dark-theme header,
+.dark-theme footer {
+  background-color: #202020; /* Fundo do header e footer mais claro que o fundo geral */
+  color: #b3b3b3; /* Texto com contraste suficiente */
+}  
+
+.dark-theme .game-card {
+  background-color: #242424; /* Fundo dos cards mais claro que o fundo geral */
+  border: 1px solid #333; /* Borda sutil */
+}
+
+.dark-theme .game-card:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra mais discreta */
+}
+
+.dark-theme nav ul li a {
+  color: #e0e0e0; /* Links com contraste melhor */
+}
+
+.dark-theme nav ul li a:hover {
+  background-color: #333; /* Fundo ao passar o mouse */
+}
+
+.dark-theme .search-input {
+  background-color: #242424; /* Fundo do campo de busca */
+  color: #e0e0e0; /* Texto do campo de busca */
+  border: 1px solid #333; /* Borda sutil */
+}
+
+.dark-theme .search-button {
+  background-color: #333; /* Fundo do botão de busca */
+  color: #e0e0e0; /* Texto do botão */
+}
+
+.dark-theme .search-button:hover {
+  background-color: #444; /* Fundo ao passar o mouse */
+}
+
+.dark-theme .back-to-home-button {
+  background-color: #444; /* Fundo cinza escuro */
+  color: #e0e0e0; /* Texto claro */
+}
+
+.dark-theme .back-to-home-button:hover {
+  background-color: #333; /* Fundo mais escuro ao passar o mouse */
+}
+
+/* Tema Claro */
+.light-theme {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.light-theme h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333; /* Cor escura para contraste no fundo claro */
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+}
+
+.light-theme h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333; /* Cor escura para contraste no fundo claro */
+  margin: 10px 0;
+  text-align: center;
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Esconde o texto que não cabe */
+  text-overflow: ellipsis; /* Adiciona reticências (...) */
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+  font-family: 'Press Start 2P', cursive; /* Fonte de destaque */
+}
+
+.light-theme header,
+.light-theme footer {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.light-theme .game-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.light-theme .game-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme nav ul li a {
+  color: #333;
+}
+
+.light-theme nav ul li a:hover {
+  background-color: #ddd;
+}
+
+.light-theme .search-input {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.light-theme .search-button {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.light-theme .search-button:hover {
+  background-color: #ddd;
+}
+
+/* Switch de Tema */
+.theme-switcher {
   position: absolute;
   top: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  z-index: 1000;
-  font-family: Poppins, sans-serif;
-}
-
-.auth-buttons .neon-button {
-  margin-bottom: 10px;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #111;
-  border: 2px solid #0ff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: Poppins, sans-serif;
-  z-index: 1000;
-}
-
-/* Error Page */
-
-/* Estilos para o Componente de Erro */
-.error-container {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0b0c12; /* Fundo mais escuro */
-  color: #f5f5f5;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
-}
-
-.error-title {
-  font-size: 6rem;
-  color: #39ff14;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-  margin: 0;
-}
-
-.error-message {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  color: #ffffff;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
-}
-
-.back-home-button {
-  color: #000;
-  font-size: 1.2rem;
-  padding: 10px 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #ccc;
+  color: #333;
   border: none;
   border-radius: 5px;
-  background-color: #39ff14;
-  color: #0e0e10;
-  text-decoration: none;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.back-home-button:hover {
-  background-color: #00a80e;
-  transform: scale(1.05);
+.theme-switcher:hover {
+  background-color: #bbb;
 }
 
-
-/* Estilos responsivos */
-
+/* Responsividade */
 @media (max-width: 768px) {
-
-  body.light-theme {
-    background-color: #aaaaaa;
-    color: #000000;
-  }
-
-  header.light-theme {
-    background-color: #00ffff;
-  }
-
-  .back-to-home-button {
-    bottom: 10px; /* Ajuste de posição para telas menores */
-    right: 10px; /* Ajuste de posição para telas menores */
-    padding: 8px 16px; /* Ajuste de tamanho dos botões em telas menores */
-    font-size: 0.8rem; 
-  }
-
-  .iframe-container {
-    border-radius: 8px; /* Ajuste de borda para telas menores */
-    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3); /* Ajuste de sombra para telas menores */
-  }
-
-  .search-bar {
-    margin: 10px 0; /* Ajuste de margem para telas menores */
-  }
-
-  .games-grid {
-    padding: 10px; /* Ajuste de padding para telas menores */
-    margin-top: 10px; /* Ajuste de margem para telas menores */
-    margin-bottom: 10px; /* Ajuste de margem para telas menores */
-    gap: 10px; /* Ajuste de espaçamento para telas menores */
-  }	
-
-  .game-card.light-theme {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-    box-shadow: 0 4px 8px rgba(255, 0, 255, 0.3);
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    margin-top: 80px;
-  }
-
-  nav ul li a {
-    padding: 10px 15px;
-  }
-
-  nav {
-    flex-direction: row;
-    align-items: center;
-    margin: 15px 0;
-    padding: 0 20px;
-  }
-
   nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px; 
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: auto;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 0 10px; /* Ajuste de margem para telas menores */
-    margin: 20px 8px; /* Ajuste de margem para telas menores */
-  }
-
-  .auth-buttons {
-    flex-direction: row;
-    margin-left: 0;
-  }
-
-  .auth-buttons-container {
     flex-direction: column;
-    right: 10px; /* Ajustado para evitar sobreposição em telas menores */
-  }
-
-  .auth-buttons .neon-button {
-    font-size: 0.8rem; /* Ajuste de tamanho dos botões em telas menores */
-  }
-
-  .games-grid {
-    gap: 20px; /* Reduzido o espaçamento para telas menores */
-  }
-
-  .game-card {
-    width: 180px;
-    height: 180px; /* Ajuste de tamanho dos cards em telas menores */
-    margin-bottom: 10px;
-  }
-
-  .theme-switcher {
-    font-size: 0.8rem; /* Ajuste de tamanho do switch de tema para telas menores */
-    margin-right: 0; /* Ajuste de margem para telas menores */
-  }
-
-  .search-bar {
-    width: 100px;
-    display: inline;
     gap: 10px;
   }
 
-  .logout-button {
-    padding: 8px 16px; /* Ajuste de tamanho dos botões em telas menores */
-    font-size: 0.8rem; 
-    background-color: #ff4c4c;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    bottom: 10px;
-    text-align: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    font-family: Poppins, sans-serif;
-    display: inline-flex;
-    flex-direction: row;
-    left: 10px;
-    position: absolute;
+  .game-card {
+    width: 100%;
+    max-width: 300px;
   }
 
-  .logout-button:hover {
-    background-color: #ff0000;
+  .search-input {
+    width: 100%;
+    max-width: 200px;
   }
-
 }
