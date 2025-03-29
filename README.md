@@ -1,7 +1,5 @@
 ![Image](https://github.com/user-attachments/assets/d1e08111-d248-46bc-8adb-c4ce0ed69e4e)
 
-Aqui está o README atualizado com a menção ao Firebase sendo inutilizado no projeto atual, mas com a estrutura pronta para quem quiser utilizá-lo:  
-
 ```markdown
 # Press2Play
 
