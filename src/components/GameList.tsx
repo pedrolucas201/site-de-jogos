@@ -18,7 +18,7 @@ const GameList: React.FC<GameListProps> = ({ category }) => {
 
   // Filtrar jogos pela categoria e pela busca
   const filteredGames = games.filter(game => 
-    game.category === category && game.title.toLowerCase().includes(searchQuery)
+    game.category.includes(category) && game.title.toLowerCase().includes(searchQuery)
   );
 
   return (
